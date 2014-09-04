@@ -1,0 +1,67 @@
+/* Write your CSS! */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+html {
+}
+
+body {
+  font-family: 'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+header {
+    height: 200px;
+}
+
+section {
+    height: 600px;
+    color: #fff;
+    position: relative;
+
+    h1 {
+        text-shadow: 1px 1px 2px rgba(0,0,0,.4);
+        font-weight: 300;
+        padding: 60px 60px 10px 60px;
+    }
+
+    p.desc {
+        line-height: 1.6em;
+        width: 50%;
+        margin-left: 60px;
+        text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+        color: rgba(255,255,255,.8);
+    }
+}
+
+.cbcradioapp {
+  @include background-image(radial-gradient(ellipse at 120% 100%, #acd8ff 0%, #004b8c 50%, #09131c 100%));
+}
+.byron {
+  @include background-image(radial-gradient(ellipse farthest-side at 120% 100%, white 10%, #85D8CE 50%, #085078 120%));
+}
+.masseys {
+  @include background-image(radial-gradient(ellipse farthest-side at 120% 100%, #53524e 10%, #362c2a 50%, #16120f 120%));
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  
+  /* Styles for mobile */
+
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  /* Styles for tablet */
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+
+  /* Don't forget your Retina CSS! */
+  
+  body {
+    background-size: 72px 72px;
+  }
+
+}
