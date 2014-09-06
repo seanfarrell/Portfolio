@@ -1,4 +1,4 @@
-$(document).on("click", "a.project", function () {
+$(document).on("click", "a.viewProject, a.closeProject", function () {
 
     // get the href attribute
     var newUrl = $(this).attr("href");
