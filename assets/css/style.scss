@@ -1,5 +1,4 @@
 /* Write your CSS! */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
 html {
 }
@@ -11,6 +10,35 @@ body {
 
 header {
     height: 200px;
+}
+
+.project header {
+    height: 600px;
+    color: #fff;
+    position: relative;
+
+    h1 {
+        text-shadow: 1px 1px 2px rgba(0,0,0,.4);
+        font-weight: 300;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 4em;
+    }
+    p.desc {
+        line-height: 1.6em;
+        width: 80%;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+        color: rgba(255,255,255,.8);
+    }
+}
+
+body#cbcradioapp header {
+    @include background-image(radial-gradient(ellipse at 120% 100%, #acd8ff 0%, #004b8c 50%, #09131c 100%));
+    color: #fff;
 }
 
 section {
