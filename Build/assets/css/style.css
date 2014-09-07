@@ -128,11 +128,14 @@ section.homeProject {
     text-align: center;
     font-size: 4em;
     line-height: 2em;
-    letter-spacing: -3px; }
+    letter-spacing: -3px;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.3em; }
   .project header p.desc {
     width: 80%;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     color: rgba(255, 255, 255, 0.8); }
@@ -158,24 +161,25 @@ body#cbcradioapp header {
   background-image: radial-gradient(ellipse at 120% 100%, #acd8ff 0%, #004b8c 50%, #09131c 100%);
   color: #fff; }
 
-#cbcradioapp section.hero {
-  margin: -400px auto 0;
+.project section.hero {
+  margin: -415px auto 0;
   position: relative;
   z-index: 2;
   width: 100%;
-  padding-top: 810px;
-  background: url(../img/cbcradio/cbcradio-topImage-1200.png) top center no-repeat; }
+  text-align: center;
+  /*background: url(../img/cbcradio/cbcradio-topImage-1200.png) top center no-repeat;*/ }
+
+body#byron header {
+  background: #85d8ce;
+  background-image: -webkit-radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
+  background-image: -moz-radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
+  background-image: -o-radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
+  background-image: -ms-radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
+  background-image: radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
+  color: #fff; }
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width: 1200px) {
-  #cbcradioapp section.hero {
-    padding-top: 766px;
-    background: url(../img/cbcradio/cbcradio-topImage-1200.png) top center no-repeat; } }
 /* Medium Devices, Desktops */
-@media only screen and (max-width: 1200px) {
-  #cbcradioapp section.hero {
-    padding-top: 575px;
-    background: url(../img/cbcradio/cbcradio-topImage-900.png) top center no-repeat; } }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 900px) {
   .project header h1 {
@@ -184,10 +188,8 @@ body#cbcradioapp header {
   .project header {
     height: 400px; }
 
-  #cbcradioapp section.hero {
-    margin: -250px auto 0;
-    padding-top: 473px;
-    background: url(../img/cbcradio/cbcradio-topImage-700.png) top center no-repeat; } }
+  section.hero {
+    margin: -250px auto 0 !important; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 700px) {
   .project {
@@ -206,15 +208,8 @@ body#cbcradioapp header {
     .project header p.desc {
       line-height: 1.4em; }
 
-  #cbcradioapp section.hero {
-    margin: -100px auto 0;
-    padding-top: 192px;
-    background: url(../img/cbcradio/cbcradio-topImage-300.png) top center no-repeat; }
+  section.hero {
+    margin: -100px auto 0 !important; }
 
   .project p.centered {
     margin: 50px auto; } }
-/* Custom, iPhone Retina */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  #cbcradioapp section.hero {
-    background: url(../img/cbcradio/cbcradio-topImage-600.png) top center no-repeat;
-    background-size: 300px 192px; } }

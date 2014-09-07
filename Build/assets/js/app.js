@@ -22,6 +22,7 @@ $(document).on("click", "a.viewProject, a.closeProject", function () {
 
 
 $(document).ready(function () {
+
     var headerHeight = $(".project header").height();
 
     $(window).scroll(function() {    
