@@ -196,6 +196,10 @@ body#byron header {
     font-size: .9em; }
     .project .closeProject {
       display: none; }
+    .project p.centered {
+      margin: 30px auto; }
+    .project .centeredScreen {
+      padding: 30px 0; }
 
   .project header h1 {
     font-size: 2em;
@@ -206,10 +210,8 @@ body#byron header {
     height: 275px;
     padding-top: 20px; }
     .project header p.desc {
-      line-height: 1.4em; }
+      line-height: 1.4em;
+      margin: 10px auto; }
 
   section.hero {
-    margin: -100px auto 0 !important; }
-
-  .project p.centered {
-    margin: 50px auto; } }
+    margin: -100px auto 0 !important; } }

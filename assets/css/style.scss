@@ -218,6 +218,13 @@ body#byron header {
         .closeProject {
           display: none;
         }
+
+        p.centered {
+          margin: 30px auto;
+        }
+        .centeredScreen {
+          padding: 30px 0;
+        }
     }
 
     .project header h1 {
@@ -230,15 +237,14 @@ body#byron header {
         height: 275px;
         padding-top: 20px;
 
-        p.desc { line-height: 1.4em;}
+        p.desc { 
+          line-height: 1.4em;
+          margin: 10px auto;
+        }
     }
     
     section.hero {
         margin: -100px auto 0 !important;
     }
 
-    
-    .project p.centered {
-      margin: 50px auto;
-    }
   }
