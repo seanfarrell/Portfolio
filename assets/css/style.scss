@@ -1,5 +1,8 @@
 /* Write your CSS! */
 
+@import "_mixins.scss";
+
+
 html {
   -webkit-font-smoothing: antialiased
 }
@@ -59,10 +62,7 @@ section.homeProject {
     text-decoration: none;
     display: block;
     margin-top: 50px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease; 
+    @include transition(all 0.3s ease); 
 }
 
 a.viewProject:hover {
@@ -74,15 +74,14 @@ a.viewProject:hover {
 
 
 .cbcradioapp {
-  @include background-image(radial-gradient(ellipse at 120% 100%, #acd8ff 0%, #004b8c 50%, #09131c 100%));
+  @include radial-gradient-bg(120%, 100%, #acd8ff, 0%, #004b8c, 50%, #09131c, 100%);
 }
 .byron {
-  @include background-image(radial-gradient(ellipse farthest-side at 120% 100%, white 10%, #85D8CE 50%, #085078 120%));
+  @include radial-gradient-bg(120%, 100%, white, 10%, #85D8CE, 50%, #085078, 120%);
 }
 .masseys {
-  @include background-image(radial-gradient(ellipse farthest-side at 120% 100%, #53524e 10%, #362c2a 50%, #16120f 120%));
+  @include radial-gradient-bg(120%, 100%, #53524e, 10%, #362c2a, 50%, #16120f, 120%);
 }
-
 
 
 /* PROJECT PAGE STYLES */
@@ -99,14 +98,12 @@ a.viewProject:hover {
       top: 30px;
       left: 30px;
       z-index: 999;
-      opacity: .3;
-
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-  }
-  .closeProject:hover { opacity: 1; }
+      @include opacity(.3);
+      @include transition(all 0.3s ease);
+    }
+  .closeProject:hover { 
+    @include opacity(1);
+   }
 
   .light {
     background: url(assets/img/close-project-white.png) no-repeat;
@@ -119,7 +116,6 @@ a.viewProject:hover {
     height: 600px;
     position: relative;
     z-index: 1;
-    padding-left: 20px;
     padding-top: 30px;
   
     h1 {
@@ -131,7 +127,6 @@ a.viewProject:hover {
         letter-spacing: -3px;
     }
     p.desc {
-        line-height: 1.6em;
         width: 80%;
         max-width: 700px;
         margin: 0 auto;
@@ -160,7 +155,7 @@ a.viewProject:hover {
 }
 
 body#cbcradioapp header {
-    @include background-image(radial-gradient(ellipse at 120% 100%, #acd8ff 0%, #004b8c 50%, #09131c 100%));
+    @include radial-gradient-bg(120%, 100%, #acd8ff, 0%, #004b8c, 50%, #09131c, 100%);
     color: #fff;
 }
 
@@ -213,15 +208,23 @@ body#cbcradioapp header {
   @media only screen and (max-width : 700px) {
     .project {
         font-size: .9em;
+
+        .closeProject {
+          display: none;
+        }
     }
 
     .project header h1 {
         font-size: 2em;
         padding-bottom: 10px;
+        letter-spacing: -1px;
     }
     
     .project header {
         height: 275px;
+        padding-top: 20px;
+
+        p.desc { line-height: 1.4em;}
     }
     #cbcradioapp section.hero {
       margin: -100px auto 0;
@@ -234,6 +237,11 @@ body#cbcradioapp header {
   }
 
   /* Custom, iPhone Retina */ 
-  @media only screen and (max-width : 320px) {
-    
-  }
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    #cbcradioapp section.hero {
+      background: url(../assets/img/cbcradio/cbcradio-topImage-600.png) top center no-repeat;
+      background-size: 300px 192px;
+    }
+}
