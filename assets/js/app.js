@@ -19,3 +19,18 @@ $(document).on("click", "a.viewProject, a.closeProject", function () {
     // prevent the default browser behavior.
     return false;
 });
+
+
+$(document).ready(function () {
+    var headerHeight = $(".project header").height();
+
+    $(window).scroll(function() {    
+        var scroll = $(this).scrollTop();
+
+        if (scroll >= headerHeight) {
+            $(".closeProject").removeClass("light").addClass("dark");
+        } else {
+            $(".closeProject").removeClass("dark").addClass("light");
+        }
+    });
+});
