@@ -2,6 +2,9 @@
 
 @import "_mixins.scss";
 
+* {
+  @include box-sizing(border-box);
+}
 
 html {
   -webkit-font-smoothing: antialiased
@@ -139,21 +142,27 @@ a.viewProject:hover {
     }
   }
 
-  section {
-      color: #666;
-  }
   img {
     max-width: 90%;
-}
-  p.centered {
+  }
+
+  section.centeredCopy {
       width: 80%;
       max-width: 800px;
       margin: 100px auto;
+      color: #666;
   }
+
   .centeredScreen {
       text-align: center;
       padding: 50px 0;
       background: #f7f7f7;
+  }
+
+  section.fullWidthPhoto {
+      margin: 0 0;
+
+      img { max-width: 100% !important; }
   }
 }
 
@@ -168,7 +177,8 @@ body#cbcradioapp header {
   z-index: 2;
   width: 100%;
   text-align: center;
-  /*background: url(../assets/img/cbcradio/cbcradio-topImage-1200.png) top center no-repeat;*/
+
+
 }
 
 
@@ -219,7 +229,23 @@ body#byron header {
           display: none;
         }
 
-        p.centered {
+        header h1 {
+        font-size: 2em;
+        padding-bottom: 10px;
+        letter-spacing: -1px;
+        }
+
+        header {
+        height: 275px;
+        padding-top: 20px;
+
+          p.desc { 
+            line-height: 1.4em;
+            margin: 10px auto;
+          }
+        }
+
+        section.centeredCopy {
           margin: 30px auto;
         }
         .centeredScreen {
@@ -227,24 +253,13 @@ body#byron header {
         }
     }
 
-    .project header h1 {
-        font-size: 2em;
-        padding-bottom: 10px;
-        letter-spacing: -1px;
-    }
-    
-    .project header {
-        height: 275px;
-        padding-top: 20px;
-
-        p.desc { 
-          line-height: 1.4em;
-          margin: 10px auto;
-        }
-    }
     
     section.hero {
         margin: -100px auto 0 !important;
     }
 
   }
+
+
+
+
