@@ -29,41 +29,61 @@ body {
   visibility: hidden; }
 
 /* HOME PAGE STYLES */
-header {
-  height: 200px; }
+header#home {
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.4);
+  top: 0;
+  z-index: 999; }
 
 section.homeProject {
-  height: 500px;
+  height: 100vh;
   color: #fff;
   position: relative;
   overflow: hidden; }
-  section.homeProject h1 {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-    font-weight: 300;
-    padding: 100px 60px 30px 60px; }
-  section.homeProject p.desc {
-    line-height: 1.6em;
-    width: 40%;
+  section.homeProject .description {
+    width: 30%;
     margin-left: 60px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    color: rgba(255, 255, 255, 0.8); }
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    section.homeProject .description h1 {
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+      font-weight: 300;
+      padding: 0 0 30px; }
+    section.homeProject .description p.desc {
+      line-height: 1.6em;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      color: rgba(255, 255, 255, 0.8); }
   section.homeProject .homeImage {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     position: absolute;
-    width: 50%;
-    height: 500px;
-    z-index: 1;
-    bottom: -20px;
-    right: 0; }
+    right: 30px;
+    width: 60%; }
+    section.homeProject .homeImage img {
+      width: 100%; }
   section.homeProject a.viewProject {
     color: #fff;
     padding: 10px;
     text-align: center;
     width: 150px;
-    border: 1px solid #fff;
-    border-radius: 5px;
+    font-weight: 600;
+    border: 2px solid white;
     text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: none;
+    font-size: .8em;
     display: block;
     margin-top: 50px;
+    opacity: .4;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
@@ -72,7 +92,8 @@ section.homeProject {
   section.homeProject a.viewProject:hover {
     background: #fff;
     color: #000;
-    text-shadow: none; }
+    text-shadow: none;
+    opacity: 1; }
 
 .cbcradioapp {
   background: #004b8c;
@@ -83,12 +104,12 @@ section.homeProject {
   background-image: radial-gradient(ellipse at 120% 100%, #acd8ff 0%, #004b8c 50%, #09131c 100%); }
 
 .byron {
-  background: #85d8ce;
-  background-image: -webkit-radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
-  background-image: -moz-radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
-  background-image: -o-radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
-  background-image: -ms-radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
-  background-image: radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%); }
+  background: #338798;
+  background-image: -webkit-radial-gradient(ellipse at 120% 100%, white 10%, #338798 50%, #154b4a 100%);
+  background-image: -moz-radial-gradient(ellipse at 120% 100%, white 10%, #338798 50%, #154b4a 100%);
+  background-image: -o-radial-gradient(ellipse at 120% 100%, white 10%, #338798 50%, #154b4a 100%);
+  background-image: -ms-radial-gradient(ellipse at 120% 100%, white 10%, #338798 50%, #154b4a 100%);
+  background-image: radial-gradient(ellipse at 120% 100%, white 10%, #338798 50%, #154b4a 100%); }
 
 .masseys {
   background: #362c2a;
@@ -123,10 +144,15 @@ section.homeProject {
 .project .dark {
   background: url(../img/cbcradio/close-project-grey.png) no-repeat; }
 .project header {
-  height: 600px;
+  height: 300px;
   position: relative;
-  z-index: 1;
-  padding-top: 30px; }
+  z-index: 1; }
+  .project header .headerContent {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
   .project header h1 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     font-weight: 300;
@@ -140,10 +166,11 @@ section.homeProject {
   .project header p.desc {
     width: 80%;
     max-width: 700px;
-    margin: 20px auto;
+    margin: 10px auto 20px;
     text-align: center;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    color: rgba(255, 255, 255, 0.8); }
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.4em; }
 .project img {
   max-width: 90%; }
 .project section.centeredCopy {
@@ -151,14 +178,25 @@ section.homeProject {
   max-width: 800px;
   margin: 100px auto;
   color: #666; }
-.project .centeredScreen {
+.project section.centeredScreen {
   text-align: center;
-  padding: 50px 0;
-  background: #f7f7f7; }
+  border-bottom: 1px solid #e3e3e3;
+  padding: 0;
+  margin: 0; }
+  .project section.centeredScreen img {
+    margin: 0 auto;
+    padding: 0;
+    display: block; }
 .project section.fullWidthPhoto {
-  margin: 0 0; }
+  margin: 0 0;
+  z-index: 99;
+  position: relative; }
   .project section.fullWidthPhoto img {
-    max-width: 100% !important; }
+    max-width: 100% !important;
+    z-index: 9; }
+.project section.splitPhones {
+  margin: 50px auto;
+  text-align: center; }
 
 body#cbcradioapp header {
   background: #004b8c;
@@ -170,19 +208,19 @@ body#cbcradioapp header {
   color: #fff; }
 
 .project section.hero {
-  margin: -415px auto 0;
+  margin: 60px auto 0;
   position: relative;
   z-index: 2;
   width: 100%;
   text-align: center; }
 
 body#byron header {
-  background: #85d8ce;
-  background-image: -webkit-radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
-  background-image: -moz-radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
-  background-image: -o-radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
-  background-image: -ms-radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
-  background-image: radial-gradient(ellipse at 120% 100%, white 10%, #85d8ce 50%, #085078 120%);
+  background: #338798;
+  background-image: -webkit-radial-gradient(ellipse at 120% 100%, white 10%, #338798 50%, #154b4a 100%);
+  background-image: -moz-radial-gradient(ellipse at 120% 100%, white 10%, #338798 50%, #154b4a 100%);
+  background-image: -o-radial-gradient(ellipse at 120% 100%, white 10%, #338798 50%, #154b4a 100%);
+  background-image: -ms-radial-gradient(ellipse at 120% 100%, white 10%, #338798 50%, #154b4a 100%);
+  background-image: radial-gradient(ellipse at 120% 100%, white 10%, #338798 50%, #154b4a 100%);
   color: #fff; }
 
 /* Large Devices, Wide Screens */
@@ -196,7 +234,8 @@ body#byron header {
     height: 400px; }
 
   section.hero {
-    margin: -250px auto 0 !important; } }
+    margin: -250px auto 0 !important;
+    width: 100%; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 700px) {
   .project {
@@ -205,12 +244,13 @@ body#byron header {
       display: none; }
     .project header h1 {
       font-size: 2em;
-      padding-bottom: 10px;
+      padding-bottom: 0px;
       letter-spacing: -1px; }
     .project header {
-      height: 275px;
+      height: 250px;
       padding-top: 20px; }
       .project header p.desc {
+        font-size: 1em;
         line-height: 1.4em;
         margin: 10px auto; }
     .project section.centeredCopy {
@@ -219,4 +259,4 @@ body#byron header {
       padding: 30px 0; }
 
   section.hero {
-    margin: -100px auto 0 !important; } }
+    margin: -150px auto 0 !important; } }
