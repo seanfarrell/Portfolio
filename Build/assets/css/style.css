@@ -42,7 +42,10 @@ section.homeProject {
   height: 100vh;
   color: #fff;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
   section.homeProject .description {
     width: 30%;
     margin-left: 60px;
@@ -118,6 +121,14 @@ section.homeProject {
   background-image: -o-radial-gradient(ellipse at 120% 100%, #53524e 10%, #362c2a 50%, #16120f 120%);
   background-image: -ms-radial-gradient(ellipse at 120% 100%, #53524e 10%, #362c2a 50%, #16120f 120%);
   background-image: radial-gradient(ellipse at 120% 100%, #53524e 10%, #362c2a 50%, #16120f 120%); }
+
+.handmade {
+  background: #cf4742;
+  background-image: -webkit-radial-gradient(ellipse at 120% 100%, white -10%, #cf4742 30%, #260908 80%);
+  background-image: -moz-radial-gradient(ellipse at 120% 100%, white -10%, #cf4742 30%, #260908 80%);
+  background-image: -o-radial-gradient(ellipse at 120% 100%, white -10%, #cf4742 30%, #260908 80%);
+  background-image: -ms-radial-gradient(ellipse at 120% 100%, white -10%, #cf4742 30%, #260908 80%);
+  background-image: radial-gradient(ellipse at 120% 100%, white -10%, #cf4742 30%, #260908 80%); }
 
 /* PROJECT PAGE STYLES */
 .project .closeProject {
