@@ -41,6 +41,9 @@ section.homeProject {
     color: #fff;
     position: relative;
     overflow: hidden;
+    -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 
     .description {
       width: 30%;
@@ -106,6 +109,9 @@ a.viewProject:hover {
 }
 .masseys {
   @include radial-gradient-bg(120%, 100%, #53524e, 10%, #362c2a, 50%, #16120f, 120%);
+}
+.handmade {
+  @include radial-gradient-bg(120%, 100%, white, -10%, #cf4742, 30%, #260908, 80%);
 }
 
 
