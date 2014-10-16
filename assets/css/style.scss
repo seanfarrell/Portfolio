@@ -113,6 +113,9 @@ a.viewProject:hover {
 .handmade {
   @include radial-gradient-bg(120%, 100%, white, -10%, #cf4742, 30%, #260908, 80%);
 }
+.definingmoments {
+  @include radial-gradient-bg(120%, 100%, white, -10%, #c6e0ed, 30%, #023a56, 90%);
+}
 
 
 /* PROJECT PAGE STYLES */
@@ -147,6 +150,7 @@ a.viewProject:hover {
     height: 300px;
     position: relative;
     z-index: 1;
+    margin-bottom: 80px;
 
     .headerContent {
       @include vertical-align;
@@ -181,15 +185,14 @@ a.viewProject:hover {
   section.centeredCopy {
       width: 80%;
       max-width: 800px;
-      margin: 100px auto;
+      margin: 0 auto;
       color: #666;
   }
 
   section.centeredScreen {
       text-align: center;
-      border-bottom: 1px solid #e3e3e3;
       padding: 0;
-      margin: 0;
+      margin: 80px 0;
       img {
         margin: 0 auto;
         padding: 0;
@@ -206,11 +209,6 @@ a.viewProject:hover {
       img { max-width: 100% !important; z-index: 9; }
   }
 
-  section.splitPhones {
-      margin: 50px auto;
-      text-align: center;
-  }
-
   section.contact {
       
   }
@@ -222,15 +220,19 @@ body#cbcradioapp header {
 }
 
 .project section.hero {
-  margin: 60px auto 0;
+  margin: 0 auto;
   position: relative;
   z-index: 2;
   width: 100%;
   text-align: center;
-
-
 }
 
+.cbcicon {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 80px;
+}
 
 body#byron header {
     @include radial-gradient-bg(120%, 100%, white, 10%, #338798, 50%, #154b4a, 100%);
@@ -238,7 +240,46 @@ body#byron header {
 
 }
 
+body#handmade header {
+    @include radial-gradient-bg(120%, 100%, white, -10%, #cf4742, 30%, #260908, 80%);
+    color: #fff;
 
+}
+
+body#masseys header {
+    @include radial-gradient-bg(120%, 100%, #53524e, 10%, #362c2a, 50%, #16120f, 120%);
+    color: #fff;
+
+}
+
+body#definingmoments header {
+    @include radial-gradient-bg(120%, 100%, white, -10%, #c6e0ed, 30%, #023a56, 90%);
+    color: #fff;
+
+}
+
+
+
+a.visit {
+    color: #222;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    font-weight: 600;
+    border: 2px solid #222;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .9em;
+    letter-spacing: 2px;
+    display: block;
+    margin: 50px auto;
+    @include transition(all 0.3s ease); 
+}
+
+a.visit:hover {
+    background: #222;
+    color: #fff;
+}
 
 
 

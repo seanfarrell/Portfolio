@@ -130,6 +130,14 @@ section.homeProject {
   background-image: -ms-radial-gradient(ellipse at 120% 100%, white -10%, #cf4742 30%, #260908 80%);
   background-image: radial-gradient(ellipse at 120% 100%, white -10%, #cf4742 30%, #260908 80%); }
 
+.definingmoments {
+  background: #c6e0ed;
+  background-image: -webkit-radial-gradient(ellipse at 120% 100%, white -10%, #c6e0ed 30%, #023a56 90%);
+  background-image: -moz-radial-gradient(ellipse at 120% 100%, white -10%, #c6e0ed 30%, #023a56 90%);
+  background-image: -o-radial-gradient(ellipse at 120% 100%, white -10%, #c6e0ed 30%, #023a56 90%);
+  background-image: -ms-radial-gradient(ellipse at 120% 100%, white -10%, #c6e0ed 30%, #023a56 90%);
+  background-image: radial-gradient(ellipse at 120% 100%, white -10%, #c6e0ed 30%, #023a56 90%); }
+
 /* PROJECT PAGE STYLES */
 .project .closeProject {
   display: block;
@@ -157,7 +165,8 @@ section.homeProject {
 .project header {
   height: 300px;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  margin-bottom: 80px; }
   .project header .headerContent {
     position: relative;
     top: 50%;
@@ -187,13 +196,12 @@ section.homeProject {
 .project section.centeredCopy {
   width: 80%;
   max-width: 800px;
-  margin: 100px auto;
+  margin: 0 auto;
   color: #666; }
 .project section.centeredScreen {
   text-align: center;
-  border-bottom: 1px solid #e3e3e3;
   padding: 0;
-  margin: 0; }
+  margin: 80px 0; }
   .project section.centeredScreen img {
     margin: 0 auto;
     padding: 0;
@@ -205,9 +213,6 @@ section.homeProject {
   .project section.fullWidthPhoto img {
     max-width: 100% !important;
     z-index: 9; }
-.project section.splitPhones {
-  margin: 50px auto;
-  text-align: center; }
 
 body#cbcradioapp header {
   background: #004b8c;
@@ -219,11 +224,17 @@ body#cbcradioapp header {
   color: #fff; }
 
 .project section.hero {
-  margin: 60px auto 0;
+  margin: 0 auto;
   position: relative;
   z-index: 2;
   width: 100%;
   text-align: center; }
+
+.cbcicon {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 80px; }
 
 body#byron header {
   background: #338798;
@@ -232,6 +243,56 @@ body#byron header {
   background-image: -o-radial-gradient(ellipse at 120% 100%, white 10%, #338798 50%, #154b4a 100%);
   background-image: -ms-radial-gradient(ellipse at 120% 100%, white 10%, #338798 50%, #154b4a 100%);
   background-image: radial-gradient(ellipse at 120% 100%, white 10%, #338798 50%, #154b4a 100%);
+  color: #fff; }
+
+body#handmade header {
+  background: #cf4742;
+  background-image: -webkit-radial-gradient(ellipse at 120% 100%, white -10%, #cf4742 30%, #260908 80%);
+  background-image: -moz-radial-gradient(ellipse at 120% 100%, white -10%, #cf4742 30%, #260908 80%);
+  background-image: -o-radial-gradient(ellipse at 120% 100%, white -10%, #cf4742 30%, #260908 80%);
+  background-image: -ms-radial-gradient(ellipse at 120% 100%, white -10%, #cf4742 30%, #260908 80%);
+  background-image: radial-gradient(ellipse at 120% 100%, white -10%, #cf4742 30%, #260908 80%);
+  color: #fff; }
+
+body#masseys header {
+  background: #362c2a;
+  background-image: -webkit-radial-gradient(ellipse at 120% 100%, #53524e 10%, #362c2a 50%, #16120f 120%);
+  background-image: -moz-radial-gradient(ellipse at 120% 100%, #53524e 10%, #362c2a 50%, #16120f 120%);
+  background-image: -o-radial-gradient(ellipse at 120% 100%, #53524e 10%, #362c2a 50%, #16120f 120%);
+  background-image: -ms-radial-gradient(ellipse at 120% 100%, #53524e 10%, #362c2a 50%, #16120f 120%);
+  background-image: radial-gradient(ellipse at 120% 100%, #53524e 10%, #362c2a 50%, #16120f 120%);
+  color: #fff; }
+
+body#definingmoments header {
+  background: #c6e0ed;
+  background-image: -webkit-radial-gradient(ellipse at 120% 100%, white -10%, #c6e0ed 30%, #023a56 90%);
+  background-image: -moz-radial-gradient(ellipse at 120% 100%, white -10%, #c6e0ed 30%, #023a56 90%);
+  background-image: -o-radial-gradient(ellipse at 120% 100%, white -10%, #c6e0ed 30%, #023a56 90%);
+  background-image: -ms-radial-gradient(ellipse at 120% 100%, white -10%, #c6e0ed 30%, #023a56 90%);
+  background-image: radial-gradient(ellipse at 120% 100%, white -10%, #c6e0ed 30%, #023a56 90%);
+  color: #fff; }
+
+a.visit {
+  color: #222;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  font-weight: 600;
+  border: 2px solid #222;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .9em;
+  letter-spacing: 2px;
+  display: block;
+  margin: 50px auto;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+a.visit:hover {
+  background: #222;
   color: #fff; }
 
 /* Large Devices, Wide Screens */
