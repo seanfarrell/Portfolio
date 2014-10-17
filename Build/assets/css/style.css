@@ -28,49 +28,94 @@ body {
 .wow {
   visibility: hidden; }
 
+a:link, a:active, a:visited {
+  color: #222;
+  text-decoration: none; }
+
+a:hover {
+  color: #a2a2a2;
+  text-decoration: none; }
+
 /* HOME PAGE STYLES */
 header#home {
-  height: 70px;
   width: 100%;
-  position: fixed;
   background: #fff;
   background: rgba(255, 255, 255, 0.4);
   top: 0;
-  z-index: 999; }
+  z-index: 999;
+  padding: 80px 0; }
+  header#home:before, header#home:after {
+    content: " ";
+    display: table; }
+  header#home:after {
+    clear: both; }
+  header#home h1 {
+    height: 75px;
+    text-transform: uppercase;
+    float: left; }
+    header#home h1 img {
+      height: 75px; }
+  header#home p.intro {
+    float: left;
+    margin: 0 0 0 30px;
+    padding-left: 30px;
+    border-left: 2px solid #f7f7f7;
+    color: #333;
+    line-height: 75px;
+    font-weight: 300;
+    font-size: 1.1em;
+    display: block; }
+  header#home div.contacts {
+    float: right;
+    line-height: 75px;
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: 300;
+    color: #999; }
+    header#home div.contacts a {
+      font-weight: 600;
+      padding: 0 10px; }
+  header#home h2 {
+    font-weight: normal;
+    text-align: center;
+    color: #222;
+    font-size: 4em;
+    line-height: 1.2em;
+    letter-spacing: -.05em;
+    font-family: Georgia;
+    padding: 100px 0;
+    border-top: 1px solid #e3e3e3; }
+
+body#homePage {
+  padding: 0 50px 0; }
 
 section.homeProject {
-  height: 100vh;
+  padding: 100px 0;
   color: #fff;
   position: relative;
   overflow: hidden;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
+  margin-bottom: 30px;
+  height: 500px; }
   section.homeProject .description {
-    width: 30%;
-    margin-left: 60px;
     position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
+    width: 30%;
+    margin-left: 60px; }
     section.homeProject .description h1 {
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
       font-weight: 300;
-      padding: 0 0 30px; }
+      padding: 0 0 30px;
+      line-height: 1.2em; }
     section.homeProject .description p.desc {
       line-height: 1.6em;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
       color: rgba(255, 255, 255, 0.8); }
   section.homeProject .homeImage {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
     position: absolute;
     right: 30px;
-    width: 60%; }
+    top: 50px;
+    width: 55%;
+    min-width: 400px;
+    max-width: 600px; }
     section.homeProject .homeImage img {
       width: 100%; }
   section.homeProject a.viewProject {
@@ -189,7 +234,7 @@ section.homeProject {
     margin: 10px auto 20px;
     text-align: center;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 1.4em; }
 .project img {
   max-width: 90%; }
@@ -299,17 +344,49 @@ a.visit:hover {
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
 @media only screen and (max-width: 900px) {
-  .project header h1 {
-    font-size: 2.5em; }
-
-  .project header {
-    height: 400px; }
-
   section.hero {
     margin: -250px auto 0 !important;
     width: 100%; } }
 /* Extra Small Devices, Phones */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
+  header#home {
+    padding: 40px 0; }
+    header#home h1 {
+      height: 50px;
+      text-transform: uppercase;
+      float: left; }
+      header#home h1 img {
+        height: 50px; }
+
+  body#homePage {
+    padding: 0 20px 0; }
+
+  header#home p.intro {
+    display: none; }
+
+  section.homeProject {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    height: 175px;
+    text-align: center;
+    margin-bottom: 10px; }
+
+  .homeProject .description {
+    display: none; }
+
+  section.homeProject .homeImage {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    min-width: 90%;
+    right: 0;
+    top: 30px; }
+    section.homeProject .homeImage img {
+      width: 100%; }
+
   .project {
     font-size: .9em; }
     .project .closeProject {
@@ -319,16 +396,21 @@ a.visit:hover {
       padding-bottom: 0px;
       letter-spacing: -1px; }
     .project header {
-      height: 250px;
-      padding-top: 20px; }
+      height: 150px;
+      padding-top: 20px;
+      margin-bottom: 0; }
       .project header p.desc {
         font-size: 1em;
         line-height: 1.4em;
         margin: 10px auto; }
     .project section.centeredCopy {
-      margin: 30px auto; }
-    .project .centeredScreen {
-      padding: 30px 0; }
+      margin: 40px auto; }
+    .project section.centeredScreen {
+      margin: 40px 0;
+      padding: 0; }
+
+  .cbcicon {
+    margin: 0 auto 40px; }
 
   section.hero {
     margin: -150px auto 0 !important; } }
